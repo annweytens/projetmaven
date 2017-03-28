@@ -1,0 +1,174 @@
+<html>
+		<head>
+			
+					
+			<title>Fragment</title>
+		
+		</head>
+
+	<body>
+
+<nav th:fragment="HeaderBack">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>                        
+						</button>
+						<a class="navbar-brand" href="AccueilBack"> <img class="logo_header" src="../img/icone/iconeMDSblanc.png"> </a>
+						<a class="navbar-brand" href="AccueilBack"> <img class="logo_header2" src="../img/icone/iconeMDS.png"> </a>
+						<a class="navbar-brand" href="../deconnexion">Se deconnecter </a>
+						
+						
+					</div>
+					
+				<div class="collapse navbar-collapse" id="myNavbar">
+				
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="AccueilBack" class="dropdown-toggle" data-toggle="dropdown">ACCUEIL <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+								
+								<li class="dropdown-header"><a href="AccueilBack"><p class="topprestation">L'institut</p></a></li>
+									
+									<li class="divider"></li>
+									
+									<li class="dropdown-header"><a href="#suggestion"><p class="topprestation">Suggestion</p></a></li>
+										
+										
+									<li class="divider"></li>
+									
+									<li class="dropdown-header"><a href="#infos"><p class="topprestation">Informations</p></a></li>					
+										
+									
+								</ul>
+						</li>
+						
+						<li class="dropdown">
+							<a href="Prestation" class="dropdown-toggle" data-toggle="dropdown">PRESTATIONS <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									
+									
+									<li class="dropdown-header"><a href="PrestationBack#soinduvisage"><p class="topprestation">SOINS VISAGE</p></a></li>
+										
+									<li class="divider"></li>
+									
+									<li class="dropdown-header"><a href="PrestationBack#soinsspe"><p class="topprestation">SOINS SPECIFIQUES</p></a></li>
+									
+									<li class="divider"></li>
+									
+									<li class="dropdown-header"><a href="PrestationBack#parcours"><p class="topprestation">PARCOURS BIEN-ÊTRE</p></a></li>
+									
+									<li class="divider"></li>
+									
+									
+									<li class="dropdown-header"><a href="PrestationBack#soinscorps"><p class="topprestation">SOINS CORPS</p></a></li>
+										
+									<li class="divider"></li>
+									
+									<li class="dropdown-header"><a href="PrestationBack#uva"><p class="topprestation">UVA</p></a></li>
+										
+									<li class="divider"></li>
+									
+									<li class="dropdown-header"><a href="PrestationBack#epilation"><p class="topprestation">EPILATIONS</p></a></li>
+										
+									<li class="divider"></li>
+									
+									<li class="dropdown-header"><a href="PrestationBack#regardmaquillage"><p class="topprestation">REGARD ET MAQUILLAGE</p></a></li>
+										
+																	
+										
+									
+								</ul>
+						</li>
+						
+						<!--<li><a href="#portfolio">RESERVATION</a></li>-->
+						<!--<li><a href="carte_cadeau.html">CARTES CADEAUX</a></li>-->
+						
+					</ul>
+				</div>
+			</div>
+			
+		</nav>
+
+
+
+
+
+<div th:fragment="FooterBack">
+
+     
+	 
+	 <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="../img/phone.png" alt="Generic placeholder image" width="100" height="100">
+          <h2 class="text_footer">CONTACT</h2>
+		  <a href="ModifContact"><h5 class="ModifFooter">MODIFIER</h5></a>
+          <div class="col-md-4">
+                    <ul class="part">
+                        <li class="text_footer">Téléphone</li>
+                        </br>
+												
+						<li class="text_footer">Mail</li>
+                        
+					</ul>
+				</div>
+				
+				<div class="col-md-8" th:each="information :${information}">
+                    <ul class="part">
+                        <li th:text="${information.Telephone1}" class="text_footer"></li>
+                        <li th:text="${information.Telephone2}" class="text_footer"></li>
+						<li th:text="${information.Mail}" class="text_footer"></li>
+						
+                        
+					</ul>
+				</div>
+          
+        </div>
+		
+        <div class="col-lg-4">
+          <img class="img-circle" src="../img/time.png" alt="Generic placeholder image" width="100" height="100">
+          <h2 class="text_footer">HORAIRES</h2>
+		  <a href="ModifHoraires"><h5 class="ModifFooter">MODIFIER</h5></a>
+          <div class="col-md-6">
+                    <ul class="part">
+                        <li  class="text_footer">Dimanche/Lundi</li>
+                        <li class="text_footer">Mardi/Vendredi</li>
+                        <li class="text_footer">Samedi</li>
+                        <li class="text_footer">Congé</li>
+						
+                        
+                    </ul>
+                </div>
+            	<div class="col-md-6" th:each="information :${information}">
+                    <ul class="part">
+                        
+                        
+						<li th:text="${information.DimancheLundi}" class="text_footer" ></li>
+						<li th:text="${information.MardiVendredi}" class="text_footer" ></li>
+						<li th:text="${information.Samedi}" class="text_footer" ></li>
+						<li th:text="${information.conge}" class="text_footer" ></li>
+						
+                        
+                    </ul>
+                </div>
+          
+        </div>
+		
+		<div class="col-lg-4">
+		
+		<img class="img-circle img-home" src="../img/home.png" alt="Generic placeholder image" width="100" height="100">
+          <h2 class="text_footer">NOUS TROUVER</h2>
+		  <a href="#"><h5 class="ModifFooter">MODIFIER</h5></a>
+		  <p class="text_footer"> 547 rue Saint Jean  59246 Mons-en-Pévèle</p> 
+		
+		
+		</div>
+		
+        
+      </div>
+      
+      </div>
+      </body>
+      </html>

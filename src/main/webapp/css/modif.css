@@ -1,0 +1,20 @@
+body{
+	text-align:center;
+}
+
+.modif{
+	margin:20px;
+}
+
+h1{
+	color:gray;
+}
+
+.btn{
+	margin:10px;
+}
+
+.cadre{
+	border-radius:3px;
+	border: 1px solid;
+}

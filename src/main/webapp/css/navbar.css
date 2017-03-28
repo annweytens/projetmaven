@@ -1,0 +1,90 @@
+/*======================
+====Header/navbar=====
+=======================*/
+
+.topprestation{
+	text-align:center;
+	color:#298A08;
+	Font-Weight: Bold;
+	font-size:14px;
+}
+.prestation{
+	text-align:center;
+	color:black;
+	font-size:11px;
+}
+
+  .navbar {
+      margin-bottom: 0;
+      background:#6E6E6E;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #298A08 !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  
+  .logo_header{
+	width:30px;
+	position:absolute;
+	top:0%;
+	left:2%;
+}
+	.logo_header2{
+	width:30px;
+	position:absolute;
+	top:0%;
+	left:2%;
+	visibility:hidden;
+}
+
+
+@media (max-width: 768px){
+	.logo_header{
+		visibility:hidden;
+		
+}
+.logo_header2{
+	visibility:visible;
+	width:30 px;
+}
+  
+  @media (max-width: 768px) {
+	  .navbar {
+      margin-bottom: 0;
+      background:#fff;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #298A08 !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #298A08 !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  }
+  
+ 

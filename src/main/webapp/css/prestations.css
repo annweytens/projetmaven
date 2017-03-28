@@ -1,0 +1,153 @@
+/********************************/
+/*       Panel prestations      */
+/********************************/
+
+
+
+  .panel {
+      border: 1px solid #298A08; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+
+  .panel-heading {
+      color: #fff !important;
+      background-color: #298A08 !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  
+    .container-fluid {
+      padding: 60px 50px;
+  }
+  
+  .panel-body{
+	  height:73%;
+	  line-height:30px;
+	  
+  }
+
+
+
+.liprestaleft{
+	color:#6E6E6E;
+	list-style-type:none;
+	font-weight:bold;
+	font-size:x-small;
+}
+
+.liprestaright{
+	color:#6E6E6E;
+	list-style-type:none;
+	font-style:italic;
+	font-size:x-small;
+}
+
+.slideanim {
+    visibility:hidden;
+    visibility:visible\9;/*For old IE browsers IE6-8 */
+}
+.slideanim.slide {                  
+    visibility: visible;                  
+    animation: slide 1s;
+}
+.slideanim::after {
+    /* useful when its child elements are float:left; */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    } 
+}
+
+
+body {
+      position: relative; 
+}
+
+
+.img-fluid{
+	max-width:100%
+}
+
+.jumbotron { 
+    background-color: #DCDCDC;
+    color: #6E6E6E;
+	padding: 105px 15px;
+	width:100%;
+	height:50%;
+	
+	
+}
+
+.size{
+	width:100%;
+	height: 50%;
+	object-fit:cover;
+	
+}
+
+.downloadbutton{
+	color:#6E6E6E;
+}
+
+
+  /********************************/
+/*          Effet Photo       */
+/********************************/
+
+
+.grid figure{overflow:hidden}
+ figure.effect-roxy img{opacity:.7;-webkit-transition:opacity .35s,-webkit-transform .35s;transition:opacity .35s,transform .35s;-webkit-transform:scale(1.15);transform:scale(1.15)}
+figure.effect-roxy{background:-webkit-linear-gradient(45deg,#ff89e9 0,#05abe0 100%);background:linear-gradient(45deg,#ff89e9 0,#05abe0 100%)}
+   figure.effect-roxy:hover img{opacity:.7;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+
+  
+  /********************************/
+/*          Media Queries       */
+/********************************/
+
+
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  
+  
+
+  
+  

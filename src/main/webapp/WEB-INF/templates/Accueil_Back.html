@@ -1,0 +1,207 @@
+<html>
+		<head>
+			
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			
+			<script src="../bootstrap/jquery/jquery-3.1.1.min.js"></script>
+			<script src="../bootstrap/js/bootstrap.min.js"></script>
+			<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+			<link href="../css/accueil.css" rel="stylesheet">
+			<link rel="stylesheet" href="../css/navbar.css">
+			<link rel="stylesheet" href="../css/footer.css">
+			<link rel="stylesheet" href="../css/back.css">
+			<script type="text/javascript" src="../js/script.js"></script>
+			
+		
+			<title>Moment de soi</title>
+		
+		</head>
+
+	<body>
+
+		<header>
+
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation" th:insert="~{commonBack :: HeaderBack}">
+				
+		</nav>
+
+	</header> 
+	
+	
+	
+	
+	
+<!-- Carousel-->
+	
+		<div class="carousel fade-carousel slide carousel-fade" data-ride="carousel" data-interval="4000" id="carou">
+  
+			  <!-- Indicateur -->
+			  <ol class="carousel-indicators">
+				<li data-target="#carou" data-slide-to="0" class="active"></li>
+				<li data-target="#carou" data-slide-to="1"></li>
+				<li data-target="#carou" data-slide-to="2"></li>
+				<li data-target="#carou" data-slide-to="3"></li>
+				<li data-target="#carou" data-slide-to="4"></li>
+			  </ol>
+  
+			<!-- Cadre pour les slides -->
+		  <div class="carousel-inner">
+			<div class="item slides active">
+			  <div class="slide-1">
+				  <div class="overlay"></div>
+			  </div>
+			  <div class="hero">
+				<hgroup>
+					<h1>Moment de soi</h1>        
+					<h3>Institut de beauté et de bien être</h3>
+				</hgroup>
+				<a class="js-scrollTo" href="#infos"><button class="btn btn-hero btn-lg" role="button">Informations</button></a>
+			  </div>
+			</div>
+			<div class="item slides">
+			  <div class="slide-2">
+				  <div class="overlay"></div>
+			  </div>
+			  <div class="hero">        
+				<hgroup>
+					<h1>Moment de soi</h1>        
+					<h3>Institut de beauté et de bien être</h3>
+				</hgroup>       
+				<a class="js-scrollTo" href="#infos"><button class="btn btn-hero btn-lg" role="button">Informations</button></a>
+			  </div>
+			</div>
+			<div class="item slides">
+			  <div class="slide-3">
+				  <div class="overlay"></div>
+			  </div>
+			  <div class="hero">        
+				<hgroup>
+					<h1>Moment de soi</h1>        
+					<h3>Institut de beauté et de bien être</h3>
+				</hgroup>
+				<a class="js-scrollTo" href="#infos"><button class="btn btn-hero btn-lg" role="button">Informations</button></a>
+			  </div>
+			</div>
+			
+			<div class="item slides">
+			  <div class="slide-4">
+				  <div class="overlay"></div>
+			  </div>
+			  <div class="hero">        
+				<hgroup>
+					<h1>Moment de soi</h1>        
+					<h3>Institut de beauté et de bien être</h3>
+				</hgroup>
+				<a class="js-scrollTo" href="#infos"><button class="btn btn-hero btn-lg" role="button">Informations</button></a>
+			  </div>
+			</div>
+			
+			<div class="item slides">
+			  <div class="slide-5">
+				  <div class="overlay"></div>
+			  </div>
+			  <div class="hero">        
+				<hgroup>
+					<h1>Moment de soi</h1>        
+					<h3>Institut de beauté et de bien être</h3>
+				</hgroup>
+				<a class="js-scrollTo" href="#infos"><button class="btn btn-hero btn-lg" role="button">Informations</button></a>
+			  </div>
+			</div>
+			
+			<div class="item slides">
+			  <div class="slide-6">
+				  <div class="overlay"></div>
+			  </div>
+			  <div class="hero">        
+				<hgroup>
+					<h1>Moment de soi</h1>        
+					<h3>Institut de beauté et de bien être</h3>
+				</hgroup>
+				<a class="js-scrollTo" href="#infos"><button class="btn btn-hero btn-lg" role="button">Informations</button></a>
+			  </div>
+			</div>
+			
+		  </div> 
+		 </div>
+		 
+		 <!-- Bouton ajout photo carousel -->
+		 
+		 <a href="AjoutCaroussel" ><img class="btnBackADD" src="../img/boutonADD.png"/></a>
+		 <a href="#" ><img class="btnBackSUP" src="../img/boutonSUP.png"/></a>
+	
+	
+	
+	
+	
+	
+	<!-- Titre Suggestion -->
+	
+	<div class="titre_sugestion">
+	
+	<h1>Notre suggestion du moment</h1>
+	<p col-lg-4><a  href="ModifSuggestion" >Modifier Suggestion</a></p>
+	<p col-lg-4><a  href="AddSuggestion" >Ajouter Suggestion</a></p>
+	<p col-lg-4><a  href="SupprimerSuggestion" >Supprimer Suggestion</a></p>
+	
+	
+	
+	
+	</div>
+	
+	<!-- Suggestion -->
+	
+	<div id="suggestion">
+		<section class="suggestion-home">
+		  <div class="container">
+			<div class="" >
+			  
+			  <div class="row-page row" >
+			 
+			 <!-- Définir la taille de mes blocs -->
+				<div class="col-page col-sm-4 col-md-3" th:each="suggestion :${suggestions}" th:id="${suggestion.idsuggestion}"  >
+				<!-- Met ton ancre dans le lien -->
+				  <a href="Prestation"  class="cadre">
+					<div class="imgmin">
+					<figure class="effect-roxy-accueil" >
+					  <img class="img-responsive taille" th:src="'SuggestionImage?idsuggestion='+${suggestion.idsuggestion}"/>
+					  </figure>
+					</div>
+					<div class="txtmin">
+					  <h3 th:text="${suggestion.titre}"></h3>
+					  <h4 ><strong th:text="${suggestion.soustitre}"></strong></h4>
+					  <p th:text="${suggestion.text}"></p>
+					</div>
+					<div class="pop-up">
+					  <span>Voir</span>
+					</div>
+				  </a>
+				</div>
+				
+				
+				
+				
+			</div>
+		  </div>
+		</section>
+	</div>
+	
+	
+	
+	<!--footer-->
+	
+	<footer>
+	
+	<div id="infos" class="container marketing" th:insert="~{commonBack :: FooterBack}">
+
+      </div>
+	  </footer>
+
+   
+
+    
+
+
+		
+</body>	
+</html>

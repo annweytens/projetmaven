@@ -1,0 +1,389 @@
+<html>
+	<head>
+		<title>Moment de soi</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script src="bootstrap/jquery/jquery-3.1.1.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/navbar.css">
+		<link href="css/prestations.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/footer.css">
+		<script type="text/javascript" src="js/script.js"></script>
+
+	
+	</head>
+
+<body>
+
+			<header>
+
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation" th:insert="~{common :: Header}">
+				
+		</nav>
+
+	</header>
+	
+	
+	
+
+
+
+
+
+<!-- Container (Pricing Section) -->
+
+<div id="soinduvisage" class="grid">
+
+	<figure class="effect-roxy">
+        <img class="size" src="img/yonka/soinvisage.jpg"></img>              
+    </figure>
+	</div>
+
+  <div class="jumbotron text-center">
+    <h1>Soins du visage</h1>
+	 <a class=" js-scrollTo" href="#soinduvisagescroll"><span class="glyphicon glyphicon-download downloadbutton"></span></a>
+  </div>
+ 
+
+  
+
+<div id="soinduvisagescroll" class="container-fluid">
+  <div class="row slideanim">
+    <div class="col-sm-3 col-xs-12">
+	<div class="panel panel-default text-center">
+	<div class="panel-heading" >
+          <h3>Nettoyage Profond</h3>
+		 
+        </div>
+       <div class="panel-body">
+          <div class="marge" th:each="prestation :${prestations}" >
+			<p th:if="${prestation.idsouscat == 1}"><strong  th:text="${prestation.nom}"></strong>&nbsp;<i th:text="${prestation.prix}" ></i> </p>
+			<p th:if="${prestation.idsouscat == 1}" th:text="${prestation.description}"></p>
+			
+			  </div>
+			  
+        </div>
+	</div>
+    </div>          
+    <div class="col-sm-3 col-xs-12">
+	<div class="panel panel-default text-center">
+	<div class="panel-heading">
+          <h3>Hydratation Intense</h3>
+		  
+        </div>
+        <div class="panel-body" >
+          <div class="marge" th:each="prestation :${prestations}" >
+			<p th:if="${prestation.idsouscat == 2}"><strong  th:text="${prestation.nom}"></strong>&nbsp;<i th:text="${prestation.prix}" ></i></p>
+			<p th:if="${prestation.idsouscat == 2}" th:text="${prestation.description}"></p>
+		  </div>
+        </div>
+	</div>
+	</div>
+	<div class="col-sm-3 col-xs-12">
+	<div class="panel panel-default text-center">
+	<div class="panel-heading">
+          <h3>Anti-Âge</h3>
+		  
+        </div>
+        <div class="panel-body">
+          <div class="marge" th:each="prestation :${prestations}" >
+			<p th:if="${prestation.idsouscat == 3}"><strong  th:text="${prestation.nom}"></strong>&nbsp;<i th:text="${prestation.prix}" ></i></p>
+			<p th:if="${prestation.idsouscat == 3}" th:text="${prestation.description}"></p>
+		  </div>
+        </div>
+	</div>
+	</div>
+	<div class="col-sm-3 col-xs-12">
+	<div class="panel panel-default text-center">
+	<div class="panel-heading">
+          <h3>Soins Bien-Être</h3>
+		  
+        </div>
+        <div class="panel-body">
+          
+			<div class="marge" th:each="prestation :${prestations}" >
+			<p th:if="${prestation.idsouscat == 4}"><strong  th:text="${prestation.nom}"></strong>&nbsp;<i th:text="${prestation.prix}" ></i></p>
+			<p th:if="${prestation.idsouscat == 4}" th:text="${prestation.description}"></p>
+		  </div>
+        </div>
+	</div>
+	</div>
+  </div>
+
+  <hr width="100%">
+ </div>
+ 
+ 
+ <div id="soinsspe" class="grid">
+
+	<figure class="effect-roxy">
+        <img class="size" src="img/yonka/soinsspe.jpg"></img>              
+    </figure>
+	</div>
+
+  <div class="jumbotron text-center">
+    <h1>Soins spécifiques</h1>
+	 <a class=" js-scrollTo" href="#soinsspescroll"><span class="glyphicon glyphicon-download downloadbutton"></span></a>
+  </div>
+ 
+<div id="soinsspescroll" class="container-fluid">
+  <div class="row slideanim">
+    <div class="col-sm-12 col-xs-12">
+	<div class="panel panel-default text-center">
+	<div class="panel-heading">
+          <h3>Prestations</h3>
+		  
+        </div>
+		<div class="panel-body">
+        <div class="marge" th:each="prestation :${prestations}" >
+			<p th:if="${prestation.idsouscat == 5}"><strong  th:text="${prestation.nom}"></strong>&nbsp;<i th:text="${prestation.prix}" ></i></p>
+			<p th:if="${prestation.idsouscat == 5}" th:text="${prestation.description}"></p>
+		  </div>
+        </div>
+		</div>
+	</div>
+    </div>
+  <hr width="100%">
+ </div>
+ 
+ 
+  <div id="parcours" class="grid">
+
+	<figure class="effect-roxy">
+        <img class="size" src="img/yonka/soinsspe.jpg"></img>              
+    </figure>
+	</div>
+
+  <div class="jumbotron text-center">
+    <h1>Parcours Bien-Être</h1>
+	 <a class=" js-scrollTo" href="#parcoursscroll"><span class="glyphicon glyphicon-download downloadbutton"></span></a>
+  </div>
+  
+  <div id="parcoursscroll" class="container-fluid">
+  <div class="row slideanim">
+    <div class="col-sm-12 col-xs-12">
+	<div class="panel panel-default text-center">
+	<div class="panel-heading">
+          <h3>Prestations</h3>
+		  
+        </div>
+		<div class="panel-body">
+        <div class="marge" th:each="prestation :${prestations}" >
+			<p th:if="${prestation.idsouscat == 6}"><strong  th:text="${prestation.nom}"></strong>&nbsp;<i th:text="${prestation.prix}" ></i></p>
+			<p th:if="${prestation.idsouscat == 6}" th:text="${prestation.description}"></p>
+		  </div>
+        </div>
+		</div>
+	</div>
+    </div>
+  <hr width="100%">
+ </div>
+ 
+  
+  
+<div id="soinscorps" class="grid">
+
+	<figure class="effect-roxy">
+        <img class="size" src="img/yonka/soincorps.jpg"></img>              
+    </figure>
+</div>
+
+  <div class="jumbotron text-center">
+    <h1>Soins du corps</h1>
+	<h6><i>Les soins du corps sont des soins relaxants à but non thérapeutiques</i></h6>
+	 <a class=" js-scrollTo" href="#soinscorpsscroll"><span class="glyphicon glyphicon-download downloadbutton"></span></a>
+  </div>
+  
+  
+  <div id="soinscorpsscroll" class="container-fluid">
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+	<div class="panel panel-default text-center">
+	<div class="panel-heading">
+          <h3>Exfoliation</h3>
+		  
+        </div>
+         <div class="panel-body">
+          <div class="marge" th:each="prestation :${prestations}" >
+			<p th:if="${prestation.idsouscat == 7}"><strong  th:text="${prestation.nom}"></strong>&nbsp;<i th:text="${prestation.prix}" ></i></p>
+			<p th:if="${prestation.idsouscat == 7}" th:text="${prestation.description}"></p>
+		  </div>
+        </div>
+	</div>
+    </div>          
+    <div class="col-sm-4 col-xs-12">
+	<div class="panel panel-default text-center">
+	<div class="panel-heading">
+          <h3>Hydratation</h3>
+		  
+        </div>
+        <div class="panel-body">
+         <div class="marge" th:each="prestation :${prestations}" >
+			<p th:if="${prestation.idsouscat == 8}"><strong  th:text="${prestation.nom}"></strong>&nbsp;<i th:text="${prestation.prix}" ></i></p>
+			<p th:if="${prestation.idsouscat == 8}" th:text="${prestation.description}"></p>
+		  </div>
+        </div>
+	</div>
+	</div>
+	<div class="col-sm-4 col-xs-12">
+	<div class="panel panel-default text-center">
+	<div class="panel-heading">
+          <h3>Relaxation</h3>
+		  
+        </div>
+        <div class="panel-body">
+          <div class="marge" th:each="prestation :${prestations}" >
+			<p th:if="${prestation.idsouscat == 9}"><strong  th:text="${prestation.nom}"></strong>&nbsp;<i th:text="${prestation.prix}" ></i></p>
+			<p th:if="${prestation.idsouscat == 9}" th:text="${prestation.description}"></p>
+		  </div>
+		 </div>
+	</div>
+	</div>
+
+  
+</div>
+ <hr width="100%">
+</div>
+
+   <div id="uva" class="grid">
+
+	<figure class="effect-roxy">
+        <img class="size" src="img/yonka/uva.jpg"></img>              
+    </figure>
+	</div>
+
+  <div class="jumbotron text-center">
+    <h1>UVA</h1>
+	<h6><i>Sous les UV, le port de lunettes est obligatoire</i></h6>
+	 <a class=" js-scrollTo" href="#bronzage"><span class="glyphicon glyphicon-download downloadbutton"></span></a>
+  </div>
+  
+  <div id="bronzage" class="container-fluid">
+  <div class="row slideanim">
+    <div class="col-sm-12 col-xs-12">
+	<div class="panel panel-default text-center">
+	<div class="panel-heading">
+          <h3>Forfait Bronzage (UVA)</h3>
+		  
+        </div>
+		<div class="panel-body">
+        <div class="marge" th:each="prestation :${prestations}" >
+			<p th:if="${prestation.idsouscat == 10}"><strong  th:text="${prestation.nom}"></strong>&nbsp;<i th:text="${prestation.prix}" ></i></p>
+			<p th:if="${prestation.idsouscat == 10}" th:text="${prestation.description}"></p>
+		  </div>
+        </div>
+		</div>
+	</div>
+    </div>
+  <hr width="100%">
+ </div>
+  
+  
+   <div id="epilation" class="grid">
+
+	<figure class="effect-roxy">
+        <img class="size" src="img/yonka/cire.jpg"></img>              
+    </figure>
+	</div>
+  
+ 
+ <div class="jumbotron text-center">
+    <h1>Epilations</h1>
+	
+	 <a class=" js-scrollTo" href="#epilationscroll"><span class="glyphicon glyphicon-download downloadbutton"></span></a>
+  </div>
+ 
+
+<div id="epilationscroll" class="container-fluid">
+  <div class="row slideanim">
+    <div class="col-sm-6 col-xs-12">
+	<div class="panel panel-default text-center">
+	<div class="panel-heading">
+          <h3>Les spécifiques</h3>
+		  
+        </div>
+		<div class="panel-body">
+       <div class="marge" th:each="prestation :${prestations}" >
+			<p th:if="${prestation.idsouscat == 11}"><strong  th:text="${prestation.nom}"></strong>&nbsp;<i th:text="${prestation.prix}" ></i></p>
+			<p th:if="${prestation.idsouscat == 11}" th:text="${prestation.description}"></p>
+		  </div>
+			</div>
+        </div>
+		</div>
+		
+		<div class="col-sm-6 col-xs-12">
+	<div class="panel panel-default text-center">
+	<div class="panel-heading">
+          <h3>Forfaits</h3>
+		  
+        </div>
+		<div class="panel-body">
+        <div class="marge" th:each="prestation :${prestations}" >
+			<p th:if="${prestation.idsouscat == 12}"><strong  th:text="${prestation.nom}"></strong>&nbsp;<i th:text="${prestation.prix}" ></i></p>
+			<p th:if="${prestation.idsouscat == 12}" th:text="${prestation.description}"></p>
+		  </div>
+			</div>
+			
+        </div>
+		
+		
+	</div>
+    </div>
+  <hr width="100%">
+ </div>
+ 
+    <div id="regardmaquillage" class="grid">
+
+	<figure href="regardmaquillage" class="effect-roxy">
+        <img class="size" src="img/yonka/maquillageregard.jpg"></img>              
+    </figure>
+	</div>
+
+  <div class="jumbotron text-center">
+    <h1>Le Regard et Maquillage</h1>
+	 <a class=" js-scrollTo" href="#regardmaquillagescroll"><span class="glyphicon glyphicon-download downloadbutton"></span></a>
+  </div>
+  
+  <div id="regardmaquillagescroll" class="container-fluid">
+  <div class="row slideanim">
+    <div class="col-sm-12 col-xs-12">
+	<div class="panel panel-default text-center">
+	<div class="panel-heading">
+          <h3>Prestations</h3>
+		  
+        </div>
+		<div class="panel-body">
+       <div class="marge" th:each="prestation :${prestations}" >
+			<p th:if="${prestation.idsouscat == 13}"><strong  th:text="${prestation.nom}"></strong>&nbsp;<i th:text="${prestation.prix}" ></i></p>
+			<p th:if="${prestation.idsouscat == 13}" th:text="${prestation.description}"></p>
+		  </div>
+        </div>
+		</div>
+	</div>
+    </div>
+  <hr width="100%">
+ </div>
+  
+                        
+ 
+
+
+
+<!--footer-->
+	
+	<footer id="infos">
+	
+	<div class="container marketing" th:insert="~{common :: Footer}">
+
+      </div>
+	  
+	  
+	  </footer>
+
+
+
+
+</body>
+</html>
